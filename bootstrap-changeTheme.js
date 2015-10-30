@@ -2,7 +2,7 @@
  * @Author: fhc
  * @Date:   2015-10-30 08:31:57
  * @Last Modified by:   fhc
- * @Last Modified time: 2015-10-30 09:54:54
+ * @Last Modified time: 2015-10-30 10:16:44
  */
 
 (function($) {
@@ -23,7 +23,9 @@
     var $themeLink = $('#themeLink');
 
     function changeLinkUrl(themeName) {
+        // themeNameArr.shift()
         // $themeLink.prop('href', 'http://bootswatch.com/' + themeName + '/bootstrap.min.css');
+
         $themeLink.prop('href', 'bootswatch/bootstrap-' + themeName + '.css');
     }
 

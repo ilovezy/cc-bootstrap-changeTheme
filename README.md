@@ -60,11 +60,12 @@ you can change the bootstrap-changeTheme.js
 
 just search this function 
 
-and commit the second line, use the first line
+and commit the second line, use the first two lines
 
 > notice that bootswatch did't has a default css,so just forget it
 
     function changeLinkUrl(themeName) {
+        // themeNameArr.shift() // remove the default
         // $themeLink.prop('href', 'http://bootswatch.com/' + themeName + '/bootstrap.min.css');
         $themeLink.prop('href', 'bootswatch/bootstrap-' + themeName + '.css');
     }
