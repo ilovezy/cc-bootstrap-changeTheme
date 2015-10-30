@@ -37,17 +37,17 @@ simplely add a bootstrap dropdown and make sure the ul has no child li
 
     <div class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">changeTheme <b class="caret"></b></a>
-        <ul class="dropdown-menu selectTheme">
+        <ul class="dropdown-menu changeTheme">
         </ul>
     </div>
 
-and give the `ul.dropdown-menu` a class `selectTheme`
+and give the `ul.dropdown-menu` a class `changeTheme`
 
 ***
 
-or add a `select` and give it a class `selectTheme` and make sure select has no child `option`
+or add a `select` and give it a class `changeTheme` and make sure select has no child `option`
 
-    <select class="form-control" name="selectTheme"></select>
+    <select class="form-control changeTheme" name="selectTheme"></select>
 
 after all thanks to [thomaspark](https://github.com/thomaspark/bootswatch)
 go fork it!!! really good

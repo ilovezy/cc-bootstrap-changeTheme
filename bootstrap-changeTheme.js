@@ -2,7 +2,7 @@
  * @Author: fhc
  * @Date:   2015-10-30 08:31:57
  * @Last Modified by:   fhc
- * @Last Modified time: 2015-10-30 08:32:18
+ * @Last Modified time: 2015-10-30 08:58:28
  */
 
 (function($) {
@@ -11,7 +11,7 @@
     // cerulean cosmo cyborg darkly flatly journal lumen paper readable sandstone simplex slate spacelab superhero united yeti
     var themeNameArr = ['cerulean', 'cosmo', 'cyborg', 'darkly', 'flatly', 'journal', 'lumen', 'paper', 'readable', 'sandstone', 'simplex', 'slate', 'spacelab', 'superhero', 'united', 'yeti'];
 
-    var selectThemeStr = '';
+    var changeThemeStr = '';
 
     // 下面是给 css link 改变地址
     if (!$('#themeLink')) {
@@ -20,39 +20,38 @@
         $("head").append('<link id="themeLink" rel="stylesheet" type="text/css" href="http://bootswatch.com/cerulean/bootstrap.min.css">')
     }
 
-    var $selectTheme = $('.selectTheme');
+    var $changeTheme = $('.changeTheme');
     var $themeLink = $('#themeLink');
 
     // 如果本地有存着皮肤的话，就用存着的那个
     if (localStorage.getItem('boostrapTheme')) {
         $themeLink.prop('href', 'http://bootswatch.com/' + localStorage.getItem('boostrapTheme') + '/bootstrap.min.css');
-        $selectTheme.val(localStorage.getItem('boostrapTheme'));
+        $changeTheme.val(localStorage.getItem('boostrapTheme'));
     }
 
-    // 如果是 select.selectTheme
-    if ($selectTheme.get(0).tagName.toLowerCase() == 'select') {
-        // alert('select')
+    // 如果是 select.changeTheme
+    if ($changeTheme.get(0).tagName.toLowerCase() == 'select') {
 
         $.each(themeNameArr, function(index, val) {
-            selectThemeStr += '<option>' + val + '</option>'
+            changeThemeStr += '<option>' + val + '</option>'
         });
 
-        $selectTheme.html(selectThemeStr);
+        $changeTheme.html(changeThemeStr);
 
-        $selectTheme.on('change', function() {
+        $changeTheme.on('change', function() {
             $themeLink.prop('href', 'http://bootswatch.com/' + $(this).val() + '/bootstrap.min.css');
             // 给localStorage 设个值
             localStorage.setItem('boostrapTheme', $(this).val());
         });
 
-        // 如果是 ul.selectTheme>li>a
-    } else if ($selectTheme.get(0).tagName.toLowerCase() == 'ul') {
+        // 如果是 ul.changeTheme>li>a
+    } else if ($changeTheme.get(0).tagName.toLowerCase() == 'ul') {
         $.each(themeNameArr, function(index, val) {
-            selectThemeStr += '<li><a data-themename=' + val + '>' + val + '</a></li>'
+            changeThemeStr += '<li><a data-themename=' + val + '>' + val + '</a></li>'
         });
 
-        $selectTheme.html(selectThemeStr)
-        $selectTheme.find('li a').on('click', function() {
+        $changeTheme.html(changeThemeStr)
+        $changeTheme.find('li a').on('click', function() {
             $themeLink.prop('href', 'http://bootswatch.com/' + $(this).data('themename') + '/bootstrap.min.css');
             // 给localStorage 设个值
             localStorage.setItem('boostrapTheme', $(this).data('themename'));

@@ -44,7 +44,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Link</a></li>
+                <li class="active"><a href="index.html">index</a></li>
                 <li><a href="#">Link</a></li>
             </ul>
             <form class="navbar-form navbar-left" role="search">
@@ -57,7 +57,7 @@
                 <li><a href="#">Link</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">changeTheme <b class="caret"></b></a>
-                    <ul class="dropdown-menu selectTheme">
+                    <ul class="dropdown-menu changeTheme">
 
                     </ul>
                 </li>
@@ -66,17 +66,7 @@
         <!-- /.navbar-collapse -->
     </nav>
 
-    <select class="form-control" name="selectTheme"></select>
-
-    <div class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-            <li><a href="">hello</a></li>
-            <li><a href="">hello</a></li>
-            <li><a href="">hello</a></li>
-            <li><a href="">hello</a></li>
-        </ul>
-    </div>
+    <select class="form-control" name="changeTheme"></select>
 
     <br>
 
@@ -140,11 +130,52 @@
                 <div class="form-group">
                     <textarea name="" id="input" class="form-control" rows="3" required="required"></textarea>
                 </div>
-                <div class="form-group">
-                    <select name="" id="input" class="form-control" required="required">
-                        <option value=""></option>
-                    </select>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value=""> Option one is this and that&mdash;be sure to include why it's great
+                    </label>
                 </div>
+                <div class="checkbox disabled">
+                    <label>
+                        <input type="checkbox" value="" disabled> Option two is disabled
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> Option one is this and that&mdash;be sure to include why it's great
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Option two can be something else and selecting it will deselect option one
+                    </label>
+                </div>
+                <div class="radio disabled">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled> Option three is disabled
+                    </label>
+                </div>
+
+                <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+
+                <br>
+                <select multiple class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+
+                <br>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
@@ -260,6 +291,23 @@
                 <a href="#" class="list-group-item">Item 3</a>
             </div>
 
+            <div role="tabpanel">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#tab" aria-controls="tab" role="tab" data-toggle="tab">tab</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores magnam provident, mollitia minus incidunt voluptatum enim suscipit, non ipsum quidem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem inventore, repellendus rem tempora esse excepturi quos modi fugiat, laborum beatae.</div>
+                    <div role="tabpanel" class="tab-pane" id="tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, libero. Veritatis recusandae necessitatibus, harum aspernatur deleniti eos dolores, nisi reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit eveniet fuga a vitae rem, ab porro consequatur saepe aut id.</div>
+                </div>
+            </div>
 
         </div>
     </div>
