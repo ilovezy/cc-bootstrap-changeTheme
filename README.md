@@ -2,6 +2,10 @@
 
 very nice try, love this
 
+check the [demo page](http://www.icehota.com/cc-bootstrap-changeTheme/changeTheme.html) here, just click the button `changeTheme` on the navbar rightside
+
+enjoy it
+
 thanks to the [thomaspark](https://github.com/thomaspark/bootswatch)
 
 by add any of these css links to you file or just simply download these css
