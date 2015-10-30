@@ -2,13 +2,12 @@
  * @Author: fhc
  * @Date:   2015-10-30 08:31:57
  * @Last Modified by:   fhc
- * @Last Modified time: 2015-10-30 09:47:51
+ * @Last Modified time: 2015-10-30 09:54:54
  */
 
 (function($) {
     'use strict';
     // thanks to this guy https://github.com/thomaspark/bootswatch
-    // cerulean cosmo cyborg darkly flatly journal lumen paper readable sandstone simplex slate spacelab superhero united yeti
     var themeNameArr = ['default', 'cerulean', 'cosmo', 'cyborg', 'darkly', 'flatly', 'journal', 'lumen', 'paper', 'readable', 'sandstone', 'simplex', 'slate', 'spacelab', 'superhero', 'united', 'yeti'],
 
         changeThemeStr = '',
@@ -49,7 +48,6 @@
 
             $this.on('change', function() {
                 var thisVal = $this.val();
-                // $themeLink.prop('href', 'http://bootswatch.com/' + $this.val() + '/bootstrap.min.css');
                 changeLinkUrl(thisVal);
                 // 给localStorage 设个值
                 localStorage.setItem('boostrapTheme', thisVal);
@@ -65,7 +63,6 @@
             $this.find('li a').on('click', function() {
                 var $thisA = $(this);
                 var thisAData = $thisA.data('themename');
-                // $themeLink.prop('href', 'http://bootswatch.com/' + $thisA.data('themename') + '/bootstrap.min.css');
                 changeLinkUrl(thisAData)
                     // 给localStorage 设个值
                 localStorage.setItem('boostrapTheme', thisAData);

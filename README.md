@@ -53,6 +53,20 @@ after all thanks to [thomaspark](https://github.com/thomaspark/bootswatch)
 go fork it!!! really good
 
 
+## notice
+if you don't want to download the bootswatch folder
+
+you can change the bootstrap-changeTheme.js
+
+just search this function 
+
+and commit the second line, use the first line
+
+    function changeLinkUrl(themeName) {
+        // $themeLink.prop('href', 'http://bootswatch.com/' + themeName + '/bootstrap.min.css');
+        $themeLink.prop('href', 'bootswatch/bootstrap-' + themeName + '.css');
+    }
+
 
 
 
