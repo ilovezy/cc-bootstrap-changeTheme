@@ -62,6 +62,8 @@ just search this function
 
 and commit the second line, use the first line
 
+> notice that bootswatch did't has a default css,so just forget it
+
     function changeLinkUrl(themeName) {
         // $themeLink.prop('href', 'http://bootswatch.com/' + themeName + '/bootstrap.min.css');
         $themeLink.prop('href', 'bootswatch/bootstrap-' + themeName + '.css');
