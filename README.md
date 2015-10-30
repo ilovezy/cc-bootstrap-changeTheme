@@ -2,7 +2,7 @@
 
 very nice try, love this
 
-check the [demo page](http://www.icehota.com/cc-bootstrap-changeTheme/changeTheme.html) here, just click the button `changeTheme` on the navbar rightside
+check the [demo page](http://www.icehota.com/cc-bootstrap-changeTheme/index.html) here, just click the button `changeTheme` on the navbar rightside
 
 enjoy it
 
